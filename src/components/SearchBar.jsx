@@ -13,7 +13,7 @@ function SearchBar(){
                 <option value="MUSICAL_INSTRUMENTS">Musical Instruments</option>
                 <option value="BOOKS">Books</option>
             </select>
-            <input type="text" className="bg-slate-100 search w-64 h-auto px-2" id="search" placeholder="What are you looking for?"/>
+            <input type="text" className="border-l-2 border-r-2 bg-slate-100 search w-64 h-auto px-2" id="search" placeholder="What are you looking for?"/>
             <button className='fa-solid fa-search bg-slate-100 px-2'><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
         </div>
     )
