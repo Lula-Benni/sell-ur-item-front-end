@@ -18,7 +18,7 @@ const HamburgerMenu = () => {
         <span><FontAwesomeIcon className="text-white" icon={faBars} /></span>
       </button>
       <div className={`mt-2 ${isOpen ? 'block' : 'hidden'}`}>
-        <ul className="space-x-20 navbar-nav m-auto">
+        <ul className="space-x-20 navbar-nav">
             <li className="nav-item">
                 <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='text-white' icon={faBookmark} /></a>
             </li>
