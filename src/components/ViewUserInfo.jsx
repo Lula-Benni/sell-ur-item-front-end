@@ -21,17 +21,25 @@ function ViewUserInfo() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Seller Information</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Do not even try to press
-          escape key.
+          <h6>FullName</h6>
+          <p>Lulamile Plati</p>
+          <hr/>
+          <h6>Username</h6>
+          <p>Lula99</p>
+          <hr/>
+          <h6>Contacts</h6>
+          <h6>Email</h6>
+          <p>Lulamile Plati</p>
+          <h6>Phone Number</h6>
+          <p>Lulamile Plati</p>
+          <hr/>
+          <h6>Address</h6>
+          <p>Lulamile Plati</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
     </>
