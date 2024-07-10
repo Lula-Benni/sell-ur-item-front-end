@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
-
+import ViewUserInfo from './ViewUserInfo';
 function Home(){
     return(
         <div className="max-w-sm bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
@@ -23,7 +23,7 @@ function Home(){
                             <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='' icon={faComment} /></a>
                         </li>
                         <li className="">
-                            <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='' icon={faUser} /></a>
+                            <ViewUserInfo/>
                         </li> 
                     </ul>
             </div>
