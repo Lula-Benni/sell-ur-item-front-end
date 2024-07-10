@@ -4,9 +4,36 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(false);
+  const toggleDropdown = () => setShow(!show);
+
+  return (
+    <div className='custom-md:hidden pr-6'>
+      <a id='dropdown-menu' 
+        className="nav-link" 
+        href='#'
+        data-bs-toggle="dropdown"
+        aria-expanded={show}
+        onClick={toggleDropdown}
+        >
+        <FontAwesomeIcon className='text-white' icon={faBars}></FontAwesomeIcon></a>
+    
+
+        <div className={`w-fit whitespace-nowrap text-center dropdown-menu dropdown-menu-end ${show ? 'show' : ''}`} 
+          aria-labelledby="dropdown-menu">
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Go to Profile</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Messages</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Saved Items</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">My Items</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Add Items</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Log Out</a>
+      </div>
+    </div>
+  );
+{/** const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -21,9 +48,13 @@ const HamburgerMenu = () => {
         <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Go to Profile</a>
         <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Messages</a>
         <a className="py-1 hover:bg-footer-text-col px-4 nav-link" href="javascript:void(0)">Saved Items</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">My Items</a>
+        <a className="py-1 hover:bg-footer-text-col px-4 nav-link" href="javascript:void(0)">Add Items</a>
+        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Log Out</a>
+
+      </div>
     </div>
-    </div>
-  )
+)*/}
 }
 
 export default HamburgerMenu
