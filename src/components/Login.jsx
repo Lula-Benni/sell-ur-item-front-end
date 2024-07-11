@@ -1,6 +1,7 @@
 const Login = () =>{
     return(
-        <div style={{marginLeft: '36%'}} className="my-4 max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <div className="flex justify-center items-center">
+        <div className="my-4 max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
             <form className="space-y-6" action="#">
                 <h5 className="text-xl font-medium text-black dark:text-white">Sign in to SellUrItem</h5>
                 <div>
@@ -25,6 +26,7 @@ const Login = () =>{
                     Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
                 </div>
             </form>
+        </div>
         </div>
     )
 }
