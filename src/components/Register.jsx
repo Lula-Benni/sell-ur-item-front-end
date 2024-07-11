@@ -23,7 +23,8 @@ const Register = ()=> {
                     <label for="date-of-birth" className="block mb-2 text-sm font-medium text-black dark:text-white">Date of Birth</label>
                     <input type="date" name="date-of-birth" id="date-of-birth" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                 </div>
-                <span for="address" className="block text-sm font-medium text-black dark:text-white">Address</span>
+                <span for="address" className="bg-white px-[4px] w-fit relative top-8 left-4 block text-sm font-medium text-black dark:text-white">Address</span>
+                <div className="border-gray-300 border-t-[1px] border-l-[1px] border-r-[1px] border-b-[1px] rounded p-4">
                     <div>
                         <label for="street" className="block mb-2 text-sm font-medium text-black dark:text-white">Street</label>
                         <input type="text" name="street" id="street" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your Street name" required />
@@ -55,6 +56,7 @@ const Register = ()=> {
                     <div>
                         <input type="password" name="password" id="password" placeholder="Confirm password" className="mt-2 bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                     </div>
+                </div>
             </form>
             <div className="pt-4 text-sm font-medium text-black dark:text-gray-300">
             Already have an account? <a href="#" className="pl-2 text-blue-700 hover:underline dark:text-blue-500">Click here to login</a>
