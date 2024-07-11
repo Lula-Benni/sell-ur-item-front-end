@@ -1,4 +1,4 @@
-const Register = ()=> {
+const Register = ({showLogin})=> {
     return(
         <div className="flex justify-center items-center">
         <div className="my-4 max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -60,7 +60,7 @@ const Register = ()=> {
                 </div>
             </form>
             <div className="pt-4 text-sm font-medium text-black dark:text-gray-300">
-            Already have an account? <a href="#" className="pl-2 text-blue-700 hover:underline dark:text-blue-500">Click here to login</a>
+            Already have an account? <a onClick={showLogin} href="#" className="pl-2 text-blue-700 hover:underline dark:text-blue-500">Click here to login</a>
             </div>
         </div>
         </div>
