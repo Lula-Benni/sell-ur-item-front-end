@@ -24,8 +24,17 @@ const Register = ({showLogin})=> {
                     <label for="date-of-birth" className="block mb-2 text-sm font-medium text-black dark:text-white">Date of Birth</label>
                     <input type="date" name="date-of-birth" id="date-of-birth" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                 </div>
+                <span for='gender' className="bg-white relative top-8 left-4  w-fit px-[4px] block mb-2 text-sm font-medium text-black dark:text-white">Gender</span>
+                <div className="border rounded p-4 flex flex-row text-xs">
+                    <input type="radio" name="gender" id="male" value='MALE' className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    <label for="male" className="text-sm text-black dark:text-white">Male</label>
+                    <input type="radio" name="gender" id="female" value='FEMALE' className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    <label for="female" className="text-sm text-black dark:text-white">Female</label>
+                    <input type="radio" name="gender" id="other" value='OTHER' className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
+                    <label for="other" className="text-sm text-black dark:text-white">Other</label>
+                </div>
                 <span for="address" className="bg-white px-[4px] w-fit relative top-8 left-4 block text-sm font-medium text-black dark:text-white">Address</span>
-                <div className="border-gray-300 border-t-[1px] border-l-[1px] border-r-[1px] border-b-[1px] rounded p-4">
+                <div className="border-gray-300 border-[1px] rounded p-4">
                     <div>
                         <label for="street" className="block mb-2 text-sm font-medium text-black dark:text-white">Street</label>
                         <input type="text" name="street" id="street" className="bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your Street name" required />
