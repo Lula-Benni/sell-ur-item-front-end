@@ -58,6 +58,7 @@ const Register = ({showLogin})=> {
                         <input type="password" name="password" id="password" placeholder="Confirm password" className="mt-2 bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                     </div>
                 </div>
+                <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register your account</button>
             </form>
             <div className="pt-4 text-sm font-medium text-black dark:text-gray-300">
             Already have an account? <a onClick={showLogin} href="#" className="pl-2 text-blue-700 hover:underline dark:text-blue-500">Click here to login</a>
