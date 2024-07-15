@@ -30,7 +30,7 @@ function DeleteItemModal() {
             <Button variant="secondary" onClick={handleClose}>
                 No
             </Button>
-            <Button variant="primary" onClick={handleClose}>
+            <Button variant="danger" onClick={handleClose}>
                 Yes
             </Button>
         </Modal.Footer>
