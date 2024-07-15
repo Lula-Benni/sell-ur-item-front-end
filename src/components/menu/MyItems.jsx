@@ -1,8 +1,8 @@
-import Peter from '../assets/peter.webp'
+import Peter from '../../assets/peter.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import DeleteItemModal from './DeleteItemModal';
-import EditItemModal from './EditItemModal';
+import DeleteItemModal from '../DeleteItemModal';
+import EditItemModal from '../EditItemModal';
 
 function MyItems(){
     return(
