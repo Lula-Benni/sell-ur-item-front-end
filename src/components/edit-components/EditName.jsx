@@ -3,7 +3,12 @@ import Modal from 'react-bootstrap/Modal';
 
 const EditName = () =>{
     const [show, setShow] = useState(false);
-    const toggleDropdown = () => setShow(!show);
+    const [anchorText, setAnchorText] = useState('Edit');
+
+    const toggleDropdown = (event) => {setShow(!show)
+        event.preventDefault();
+        setAnchorText((prevText) => (prevText === 'Edit' ? 'Cancel' : 'Edit'));
+    };
     return(
         <div className=''>
             <a id='dropdown-menu' 
@@ -12,7 +17,7 @@ const EditName = () =>{
                 data-bs-toggle="dropdown"
                 aria-expanded={show}
                 onClick={toggleDropdown}
-            >Edit
+            >{anchorText}
             </a>
             
             <div className={`${show ? 'show' : 'hidden'}`}>
