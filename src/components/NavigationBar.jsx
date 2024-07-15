@@ -47,7 +47,6 @@ function NavigationBar(){
                                 <a className="py-1 text-black px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Go to Profile</a>
                                 <Link to='/my-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link">My Items</Link>
                                 <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link">Add Items</Link>
-                                <a className="py-1 text-black hover:bg-footer-text-col px-4 nav-link" href="javascript:void(0)">Add Items</a>
                                 <a className="py-1 text-black px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Log Out</a>
                             </div>
                         </li> 
