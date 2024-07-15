@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"
 import Register from "./Register"
 
-const Login = ({showRegister, showForgotPassword}) =>{
+const Login = () =>{
     return(
         <div className="flex justify-center items-center">
         <div className="my-4 max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -21,11 +22,11 @@ const Login = ({showRegister, showForgotPassword}) =>{
                         </div>
                         <label for="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                     </div>
-                    <a onClick={showForgotPassword} href="#" className="ms-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot Password?</a>
+                    <Link to='/forgot-password' className="ms-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot Password?</Link>
                 </div>
                 <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                    Not registered? <a onClick={showRegister} href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                    Not registered? <Link to='/register' className="text-blue-700 hover:underline dark:text-blue-500">Create account</Link>
                 </div>
             </form>
         </div>

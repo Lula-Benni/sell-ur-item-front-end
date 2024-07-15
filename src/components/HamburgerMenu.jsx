@@ -5,6 +5,8 @@ import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { Link } from 'react-router-dom';
+
 
 const HamburgerMenu = () => {
   const [show, setShow] = useState(false);
@@ -27,8 +29,8 @@ const HamburgerMenu = () => {
         <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Go to Profile</a>
         <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Messages</a>
         <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Saved Items</a>
-        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">My Items</a>
-        <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Add Items</a>
+        <Link to='/my-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link">My Items</Link>
+        <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link">Add Items</Link>
         <a className="py-1 px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Log Out</a>
       </div>
     </div>
