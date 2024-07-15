@@ -6,6 +6,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import ViewUserInfo from './ViewUserInfo';
 function Home(){
     return(
+        <div className='p-4'>
         <div className="max-w-sm bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
             <a className='' href="#">
                 <img className="max-h-52 w-full" src={Peter} alt="" />
@@ -27,6 +28,7 @@ function Home(){
                         </li> 
                     </ul>
             </div>
+        </div>
         </div>
     )
 }
