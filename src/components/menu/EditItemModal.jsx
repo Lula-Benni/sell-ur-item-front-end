@@ -3,9 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import EditPrice from './edit-components/EditPrice';
-import EditName from './edit-components/EditName';
-import EditDescription from './edit-components/EditDescription';
+import EditPrice from '../edit-components/EditPrice';
+import EditName from '../edit-components/EditName';
+import EditDescription from '../edit-components/EditDescription';
 
 function EditItemModal() {
   const [show, setShow] = useState(false);
