@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from './SearchBar'
 import HamburgerMenu from './HamburgerMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots, faPencil, faPlus, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
@@ -42,12 +42,13 @@ function NavigationBar(){
                                onClick={toggleDropdown}
                                >
                                 <FontAwesomeIcon className='text-white' icon={faUser}></FontAwesomeIcon></a>
-                            <div className={` w-fit whitespace-nowrap text-center dropdown-menu dropdown-menu-end ${show ? 'show' : ''}`} 
+                            <div className={`w-fit whitespace-nowrap text-start dropdown-menu dropdown-menu-end ${show ? 'show' : ''}`} 
                                 aria-labelledby="dropdown-menu">
-                                <a className="py-1 text-black px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Go to Profile</a>
-                                <Link to='/my-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link">My Items</Link>
-                                <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link">Add Items</Link>
-                                <a className="py-1 text-black px-4 hover:bg-footer-text-col nav-link" href="javascript:void(0)">Log Out</a>
+                                <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faUser}></FontAwesomeIcon>Go to Profile</Link>
+                                <Link to='/my-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faPencil}></FontAwesomeIcon>My Items</Link>
+                                <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faPlus}></FontAwesomeIcon>Add Items</Link>
+                                <hr/>
+                                <Link to='/my-items' className="text-center text-black px-4 hover:bg-footer-text-col nav-link">Log Out</Link>
                             </div>
                         </li> 
                     </ul>
