@@ -71,7 +71,7 @@ const Register = ({showLogin})=> {
                 </div>
                 <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register your account</button>
             </form>
-            <div className="pt-4 text-sm font-medium text-black dark:text-gray-300">
+            <div className="pt-4 text-sm font-medium text-gray-700 dark:text-gray-300">
             Already have an account? <Link to='/login' className="pl-2 text-blue-700 hover:underline dark:text-blue-500">Click here to login</Link>
             </div>
         </div>
