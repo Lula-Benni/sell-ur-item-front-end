@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-function ViewUserInfo() {
+const ViewUserInfo = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -24,20 +24,14 @@ function ViewUserInfo() {
           <Modal.Title>Seller Information</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h6>FullName</h6>
-          <p>Lulamile Plati</p>
-          <hr/>
           <h6>Username</h6>
           <p>Lula99</p>
           <hr/>
-          <h6>Contacts</h6>
-          <h6>Email</h6>
-          <p>Lulamile Plati</p>
-          <h6>Phone Number</h6>
-          <p>Lulamile Plati</p>
+          <h6>Gender</h6>
+          <p>MALE</p>
           <hr/>
-          <h6>Address</h6>
-          <p>Lulamile Plati</p>
+          <h6>Phone Number</h6>
+          <p>0768264985</p>
         </Modal.Body>
         <Modal.Footer>
         </Modal.Footer>
