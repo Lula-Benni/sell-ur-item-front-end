@@ -27,15 +27,15 @@ const HamburgerMenu = () => {
         <div className='flex'>
           <FontAwesomeIcon className='rounded-full bg-zinc-500 p-2 h-[27px] w-[27px] text-7xl ml-4 mt-4 text-white' icon={faUser}></FontAwesomeIcon>
           <div className='text-blue-700'>
-            <Link to='/my-items' className="py-1 px-4 hover:bg-footer-text-col nav-link">Go to Profile</Link>
+            <Link to='/edit-profile' className="py-1 px-4 hover:bg-footer-text-col nav-link">Go to Profile</Link>
             <Link to='/my-items' className="py-1 px-4 hover:bg-footer-text-col nav-link">View my Items</Link>
             <Link to='/add-items' className="py-1 px-4 hover:bg-footer-text-col nav-link">Add Items</Link>
           </div>
         </div>
         <hr/>
         <div className='justify-start items-start text-start'>
-          <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faCommentDots}></FontAwesomeIcon>Messages</Link>
-          <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faBookmark}></FontAwesomeIcon>Saved Items</Link>
+          <Link to='/messages' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faCommentDots}></FontAwesomeIcon>Messages</Link>
+          <Link to='/saved-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faBookmark}></FontAwesomeIcon>Saved Items</Link>
           <hr/>
           <Link to='/add-items' className="text-center text-black px-4 hover:bg-footer-text-col nav-link">Log Out</Link>
         </div>
