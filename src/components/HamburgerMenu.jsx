@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCommentDots, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots, faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
+import icon from '../assets/icon.png'
 
 const HamburgerMenu = () => {
   const [show, setShow] = useState(false);
@@ -15,15 +16,18 @@ const HamburgerMenu = () => {
     <div className='custom-md:hidden pr-6'>
       <a id='dropdown-menu' 
         className="nav-link" 
-        href='#'
         data-bs-toggle="dropdown"
         aria-expanded={show}
         onClick={toggleDropdown}
         >
         <FontAwesomeIcon className='text-white' icon={faBars}></FontAwesomeIcon></a>
-
         <div className={`w-fit whitespace-nowrap text-center dropdown-menu dropdown-menu-end ${show ? 'show' : ''}`} 
           aria-labelledby="dropdown-menu">
+        <Link to='/home' className="p-2 ml-4 no-underline flex items-center w-12 h-9">
+            <FontAwesomeIcon className='text-black' icon={faHouse} />
+            <h6 className="pl-2 mt-2 navbar-brand text-black">Home</h6>
+        </Link>
+        <hr/>
         <div className='flex'>
           <FontAwesomeIcon className='rounded-full bg-zinc-500 p-2 h-[27px] w-[27px] text-7xl ml-4 mt-4 text-white' icon={faUser}></FontAwesomeIcon>
           <div className='text-blue-700'>

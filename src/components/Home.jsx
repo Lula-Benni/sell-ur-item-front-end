@@ -4,7 +4,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import ViewUserInfo from './ViewUserInfo';
-import CardMessages from './CardMessages';
+import CardMessages from './messages/CardMessages';
 function Home(){
     return(
         <div className='p-4'>
