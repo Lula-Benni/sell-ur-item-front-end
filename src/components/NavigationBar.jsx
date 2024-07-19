@@ -28,15 +28,14 @@ function NavigationBar(){
                 <div  style={{paddingLeft: '2%', paddingRight: '3%'}} className="hidden custom-md:flex items-center">
                     <ul className="inline items-end justify-end space-x-10 navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='text-white' icon={faBookmark} /></a>
+                            <Link to='/saved-items' className="py-1 text-black px-4 hover:bg-black nav-link"><FontAwesomeIcon className='text-white' icon={faBookmark}></FontAwesomeIcon></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='text-white' icon={faComment} /></a>
+                            <Link to='/messages' className="py-1 text-black px-4 nav-link"><FontAwesomeIcon className='text-white hover:bg-zinc-800' icon={faComment}></FontAwesomeIcon></Link>
                         </li>
                         <li className="nav-item">
                             <a id='dropdown-menu' 
-                               className="nav-link dropdown-toggle" 
-                               href='#'
+                               className="py-1 nav-link dropdown-toggle" 
                                data-bs-toggle="dropdown"
                                aria-expanded={show}
                                onClick={toggleDropdown}
@@ -44,7 +43,7 @@ function NavigationBar(){
                                 <FontAwesomeIcon className='text-white' icon={faUser}></FontAwesomeIcon></a>
                             <div className={`w-fit whitespace-nowrap text-start dropdown-menu dropdown-menu-end ${show ? 'show' : ''}`} 
                                 aria-labelledby="dropdown-menu">
-                                <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faUser}></FontAwesomeIcon>Go to Profile</Link>
+                                <Link to='/edit-profile' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faUser}></FontAwesomeIcon>Go to Profile</Link>
                                 <Link to='/my-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faPencil}></FontAwesomeIcon>My Items</Link>
                                 <Link to='/add-items' className="py-1 text-black px-4 hover:bg-footer-text-col nav-link"><FontAwesomeIcon className='text-black mr-2' icon={faPlus}></FontAwesomeIcon>Add Items</Link>
                                 <hr/>
