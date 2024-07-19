@@ -14,8 +14,8 @@ import { Routes, Route } from 'react-router-dom'
 import EditPrice from './components/edit-components/EditPrice'
 import EditProfile from './components/menu/EditProfile'
 import SavedItems from './components/SavedItems'
-import Messages from './components/Messages'
-import ChatWindow from './components/ChatWindow'
+import Messages from './components/messages/Messages'
+import ChatWindow from './components/messages/ChatWindow'
 function App() {
   const [view, setView] = useState('login');
 
