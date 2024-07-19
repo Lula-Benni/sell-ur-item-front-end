@@ -6,8 +6,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'custom-md': '816px',
+        'custom-md': '866px',
+        'message-screen': '665px',
         'custom-sm': '410px',
+        'zero-screen': '0px'
       },
       colors: {
         'white-smoke': '#f9f9f9',
