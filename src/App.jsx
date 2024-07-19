@@ -11,6 +11,11 @@ import ForgotPassword from './components/ForgotPassword'
 import MyItems from './components/menu/MyItems'
 import AddItems from './components/menu/AddItems'
 import { Routes, Route } from 'react-router-dom'
+import EditPrice from './components/edit-components/EditPrice'
+import EditProfile from './components/menu/EditProfile'
+import SavedItems from './components/SavedItems'
+import Messages from './components/Messages'
+import ChatWindow from './components/ChatWindow'
 function App() {
   const [view, setView] = useState('login');
 
@@ -24,6 +29,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />}/>
         <Route path="/home" element={<Home />}/>
+        <Route path="/chat-window" element={<ChatWindow />}/>
+        <Route path='/saved-items' element={<SavedItems/>}/>
+        <Route path='/messages' element={<Messages/>}/>
+        <Route path='edit-profile' element={<EditProfile/>}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/forgot-password" element={<ForgotPassword />}/>
