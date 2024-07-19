@@ -4,6 +4,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import ViewUserInfo from './ViewUserInfo';
+import CardMessages from './CardMessages';
 function Home(){
     return(
         <div className='p-4'>
@@ -16,17 +17,10 @@ function Home(){
                 <p className="mb-2 font-bold tracking-tight text-black dark:text-white">Item Price</p>
                 <p className="mb-2 font-bold tracking-tight text-black dark:text-white">Item Category</p>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                <ul className="flex flex-wrap items-start justify-start pt-4">
-                        <li className="">
-                            <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='' icon={faBookmark} /></a>
-                        </li>
-                        <li style={{paddingLeft: '30%', paddingRight: '30%'}} className="">
-                            <a className="nav-link" href="javascript:void(0)"><FontAwesomeIcon className='' icon={faComment} /></a>
-                        </li>
-                        <li className="">
-                            <ViewUserInfo/>
-                        </li> 
-                    </ul>
+                <div className="space-x-24 flex flex-row justify-center py-4">
+                    <CardMessages/>
+                    <ViewUserInfo/>
+                </div>
             </div>
         </div>
         </div>
