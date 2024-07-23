@@ -77,9 +77,9 @@ public class ProfileServiceEmpL implements ProfileService, UserDetailsService {
         if(validate.test(profile.getGender())){
             profileDB.setGender(profile.getGender());
         }
-        if (validate.test(profile.getItems())){
+        /*if (validate.test(profile.getItems())){
             profileDB.setItems(profile.getItems());
-        }
+        }*/
         if(validate.test(profile.getPasswordResetToken())){
             profileDB.setPasswordResetToken(profile.getPasswordResetToken());
         }

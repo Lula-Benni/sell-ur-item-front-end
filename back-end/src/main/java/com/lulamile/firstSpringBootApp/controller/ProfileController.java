@@ -22,23 +22,23 @@ public class ProfileController {
     private AddressService addressService;
     @Autowired
     private ContactService contactService;
-    @PostMapping("/profile")
+    @PostMapping("/save-profile")
     public Profile saveProfile(@RequestBody Profile profile){
         return  profileService.saveProfile(profile);
     }
-    @GetMapping("/profile")
+    @GetMapping("/get-profiles")
     public List<Profile> fetchProfiles(){
         return profileService.fetchProfiles();
     }
-    @GetMapping("/profile/{id}")
+    @GetMapping("/get-profile/{id}")
     public Profile fetchProfile(@PathVariable("id") int profileId){
         return profileService.fetchProfile(profileId);
     }
-    @DeleteMapping("/profile/{id}")
+    @DeleteMapping("/delete-profile/{id}")
     public String deleteProfile(@PathVariable("id") int profileId){
         return profileService.deleteProfile(profileId);
     }
-    @PutMapping("/profile/{id}")
+    @PutMapping("/update-profile/{id}")
     public Profile updateProfile(@PathVariable("id") int profileId, @RequestBody Profile profile){
         return profileService.updateProfile(profileId, profile);
     }

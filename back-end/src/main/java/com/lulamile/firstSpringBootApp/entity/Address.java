@@ -28,8 +28,8 @@ public class Address {
     private String country;
     @Column()
     private String additionalDetails;
-    @OneToMany(mappedBy = "address")
-    private List<Profile> profiles;
+    /*@OneToMany(mappedBy = "address")
+    private List<Profile> profiles;*/
 
     @Override
     public boolean equals(Object o) {

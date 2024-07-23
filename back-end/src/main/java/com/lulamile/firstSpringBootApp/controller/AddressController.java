@@ -12,14 +12,14 @@ import java.util.List;
 public class AddressController {
     @Autowired
     private AddressService addressService;
-    @PostMapping(value = "/address", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @PostMapping(value = "/save-address", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public Address saveAddress(@RequestBody Address address){return addressService.saveAddress(address);}
-    @GetMapping("/address")
+    @GetMapping("/get-address")
     public List<Address> fetchAddresses(){return addressService.fetchAddresses();}
-    @GetMapping("/address/{id}")
+    @GetMapping("/get-address/{id}")
     public Address fetchAddressById(@PathVariable("id") int addressId){return addressService.fetchAddressById(addressId);}
-    @DeleteMapping("/address/{id}")
+    @DeleteMapping("/delete-address/{id}")
     public String deleteAddress(@PathVariable("id") int addressId){return addressService.deleteAddress(addressId);}
-    @PutMapping("/address/{id}")
+    @PutMapping("/update-address/{id}")
     public Address updateAddress(@PathVariable("id") int addressId,@RequestBody Address address){return addressService.updateAddress(addressId,address);}
 }
