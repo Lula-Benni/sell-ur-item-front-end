@@ -29,10 +29,10 @@ public class Profile {
     @Column(nullable = false)
     private String password;
     @JoinColumn(name = "contact_Id",referencedColumnName = "contactId")
-    @OneToOne(optional = false, fetch = FetchType.EAGER)
+    @OneToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     private Contact contact;
     @JoinColumn(name = "address_Id", referencedColumnName = "addressId")
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
     private Address address;
     @Column(nullable = true)
     @DateTimeFormat(pattern = "yyyy-mm-dd")
@@ -42,19 +42,25 @@ public class Profile {
     private Gender gender;
     private String passwordResetToken;
     private LocalDateTime password_reset_token_expDate;
-    @OneToMany(mappedBy = "profile")
-    private List<Item> items;
+    /*@OneToMany(mappedBy = "profile")
+    private List<Item> items;*/
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Profile profile)) return false;
-        return profileId == profile.profileId && Objects.equals(fullName, profile.fullName) && Objects.equals(userName, profile.userName) && Objects.equals(password, profile.password) && Objects.equals(contact, profile.contact) && Objects.equals(address, profile.address) && Objects.equals(dateOfBirth, profile.dateOfBirth) && gender == profile.gender && Objects.equals(passwordResetToken, profile.passwordResetToken) && Objects.equals(password_reset_token_expDate, profile.password_reset_token_expDate) && Objects.equals(items, profile.items);
+        return profileId == profile.profileId && Objects.equals(fullName, profile.fullName)
+                && Objects.equals(userName, profile.userName) && Objects.equals(password, profile.password)
+                && Objects.equals(contact, profile.contact) && Objects.equals(address, profile.address)
+                && Objects.equals(dateOfBirth, profile.dateOfBirth)
+                && gender == profile.gender && Objects.equals(passwordResetToken, profile.passwordResetToken)
+                && Objects.equals(password_reset_token_expDate, profile.password_reset_token_expDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(profileId, fullName, userName, password, contact, address, dateOfBirth, gender, passwordResetToken, password_reset_token_expDate, items);
+        return Objects.hash(profileId, fullName, userName, password, contact, address, dateOfBirth, gender, passwordResetToken,
+                password_reset_token_expDate);
     }
 
     @Override
@@ -70,7 +76,6 @@ public class Profile {
                 ", gender=" + gender +
                 ", password_reset_token='" + passwordResetToken + '\'' +
                 ", password_reset_token_expDate=" + password_reset_token_expDate +
-                ", items=" + items +
                 '}';
     }
 }
