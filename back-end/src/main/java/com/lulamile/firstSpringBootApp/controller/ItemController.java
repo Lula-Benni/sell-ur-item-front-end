@@ -12,14 +12,14 @@ import java.util.List;
 public class ItemController {
     @Autowired
     private ItemService itemService;
-    @PostMapping("/item")
+    @PostMapping("/save-item")
     public Item saveItem(@RequestBody Item item){return itemService.saveItem(item);}
-    @GetMapping("/item")
+    @GetMapping("/get-item")
     public List<Item> fetchItems(){return itemService.fetchItems();}
-    @GetMapping("/item/{id}")
+    @GetMapping("/get-item/{id}")
     public Item fetchItemById(@PathVariable("id") int itemId){return itemService.fetchItemById(itemId);}
-    @DeleteMapping("item/{id}")
+    @DeleteMapping("delete-item/{id}")
     public String deleteItem(@PathVariable("id") int itemId){return itemService.deleteItem(itemId);}
-    @PutMapping("item/{id}")
+    @PutMapping("update-item/{id}")
     public Item updateItem(@PathVariable("id") int itemId, @RequestBody Item item){return itemService.updateItem(itemId,item);}
 }

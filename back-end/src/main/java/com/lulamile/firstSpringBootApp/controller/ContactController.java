@@ -12,17 +12,17 @@ import java.util.List;
 public class ContactController {
     @Autowired
     private ContactService contactService;
-    @PostMapping("/contact")
+    @PostMapping("/save-contact")
     public Contact saveContact(@RequestBody Contact contact){return contactService.saveContact(contact);}
-    @GetMapping("/contact")
+    @GetMapping("/get-contact")
     public List<Contact> fetchContacts(){return contactService.fetchContacts();}
-    @GetMapping("/contact/{id}")
+    @GetMapping("/get-contact/{id}")
     public Contact fetchContactById(@PathVariable("id") int contactId){return contactService.fetchContactById(contactId);}
-    @DeleteMapping("/contact/{id}")
+    @DeleteMapping("/delete-contact/{id}")
     public String deleteContact(@PathVariable("id") int contactId){return contactService.deleteContact(contactId);}
-    @PutMapping("/contact/{id}")
+    @PutMapping("/update-contact/{id}")
     public Contact updateContact(@PathVariable("id") int contactId,@RequestBody Contact contact){return contactService.updateContact(contactId,contact);}
-    @GetMapping("/contact/email/{email}")
+    @GetMapping("/get-contact/email/{email}")
     public Contact fetchContactByEmail(@PathVariable("email") String email){
         return contactService.fetchContactByEmail(email);
     }
