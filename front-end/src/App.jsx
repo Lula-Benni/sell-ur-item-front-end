@@ -27,7 +27,7 @@ function App() {
     <div className='App'>
       <NavigationBar/>
       <Routes>
-        <Route path="/" element={<Login />}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
         <Route path="/chat-window" element={<ChatWindow />}/>
         <Route path='/saved-items' element={<SavedItems/>}/>

@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -25,11 +26,10 @@ public class WebSecurityConfig {
         return new MvcRequestMatcher.Builder(introspector);
     }
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http, MvcRequestMatcher.Builder mvc) throws Exception {
-        http
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers(mvc.pattern("/login"), mvc.pattern("/reset-password"), mvc.pattern("/change-password"), mvc.pattern("/register"),mvc.pattern("/forgot-password")
-                                ,mvc.pattern("/css/**"),mvc.pattern("/fonts/**"),mvc.pattern("/images/**"),mvc.pattern("/js/**"))
+                        .requestMatchers("/**")
                         .permitAll()
                         .anyRequest()
                         .authenticated()

@@ -7,7 +7,7 @@ import EditPrice from '../edit-components/EditPrice';
 import EditName from '../edit-components/EditName';
 import EditDescription from '../edit-components/EditDescription';
 
-function EditItemModal() {
+function EditItemModal({itemName, itemPrice, itemCategory, itemDescription}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -31,7 +31,7 @@ function EditItemModal() {
             <div>
               <h5>Item Name</h5>
               <div className='pt-2' >
-                <h6 >Iphone 7</h6>
+                <h6 >{itemName}</h6>
               </div>
               <EditName/>
             </div>
@@ -39,7 +39,7 @@ function EditItemModal() {
             <div>
               <h5>Item Price</h5>
               <div className='pt-2'>
-                <h6 className=''>R3000.000</h6>       
+                <h6 className=''>R{itemPrice}</h6>       
               </div>
               <EditPrice/>
             </div>
@@ -48,13 +48,13 @@ function EditItemModal() {
               <h5>Item Category</h5>
             </div>
             <div className='pt-2' >
-              <h6 >John Doe</h6>
+              <h6 >{itemCategory}</h6>
             </div>
             <hr/>
             <div>
               <h5>Item Description</h5>
               <div className='pt-2' >
-                <h6 >Black</h6>
+                <h6 >{itemDescription}</h6>
               </div>
               <EditDescription/>
             </div>

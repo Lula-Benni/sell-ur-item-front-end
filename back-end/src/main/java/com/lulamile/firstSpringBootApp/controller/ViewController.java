@@ -1,3 +1,4 @@
+/*
 package com.lulamile.firstSpringBootApp.controller;
 
 import com.lulamile.firstSpringBootApp.service.*;
@@ -249,4 +250,4 @@ public class ViewController {
         log.info("****************************password from: "+profileById.getUserName()+" updated***********************************");
         return "redirect:/login";
     }
-}
+}*/

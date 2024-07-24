@@ -26,10 +26,12 @@ public class ProfileController {
     public Profile saveProfile(@RequestBody Profile profile){
         return  profileService.saveProfile(profile);
     }
+    @CrossOrigin
     @GetMapping("/get-profiles")
     public List<Profile> fetchProfiles(){
         return profileService.fetchProfiles();
     }
+    @CrossOrigin
     @GetMapping("/get-profile/{id}")
     public Profile fetchProfile(@PathVariable("id") int profileId){
         return profileService.fetchProfile(profileId);
