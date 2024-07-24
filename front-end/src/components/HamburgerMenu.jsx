@@ -23,9 +23,8 @@ const HamburgerMenu = () => {
         <FontAwesomeIcon className='text-white' icon={faBars}></FontAwesomeIcon></a>
         <div className={`w-fit whitespace-nowrap text-center dropdown-menu dropdown-menu-end ${show ? 'show' : ''}`} 
           aria-labelledby="dropdown-menu">
-        <Link to='/home' className="p-2 ml-4 no-underline flex items-center w-12 h-9">
-            <FontAwesomeIcon className='text-black' icon={faHouse} />
-            <h6 className="pl-2 mt-2 navbar-brand text-black">Home</h6>
+        <Link to='/home' className="hover:bg-footer-text-col p-2 ml-4 no-underline flex items-center h-9 text-black">
+            <FontAwesomeIcon className='pr-2 text-black' icon={faHouse}></FontAwesomeIcon>Home
         </Link>
         <hr/>
         <div className='flex'>
