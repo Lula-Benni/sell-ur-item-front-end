@@ -14,8 +14,10 @@ public class AddressController {
     private AddressService addressService;
     @PostMapping(value = "/save-address", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public Address saveAddress(@RequestBody Address address){return addressService.saveAddress(address);}
-    @GetMapping("/get-address")
+    @CrossOrigin
+    @GetMapping("/get-addresses")
     public List<Address> fetchAddresses(){return addressService.fetchAddresses();}
+    @CrossOrigin
     @GetMapping("/get-address/{id}")
     public Address fetchAddressById(@PathVariable("id") int addressId){return addressService.fetchAddressById(addressId);}
     @DeleteMapping("/delete-address/{id}")

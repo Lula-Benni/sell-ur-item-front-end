@@ -14,8 +14,10 @@ public class ItemController {
     private ItemService itemService;
     @PostMapping("/save-item")
     public Item saveItem(@RequestBody Item item){return itemService.saveItem(item);}
-    @GetMapping("/get-item")
+    @CrossOrigin
+    @GetMapping("/get-items")
     public List<Item> fetchItems(){return itemService.fetchItems();}
+    @CrossOrigin
     @GetMapping("/get-item/{id}")
     public Item fetchItemById(@PathVariable("id") int itemId){return itemService.fetchItemById(itemId);}
     @DeleteMapping("delete-item/{id}")

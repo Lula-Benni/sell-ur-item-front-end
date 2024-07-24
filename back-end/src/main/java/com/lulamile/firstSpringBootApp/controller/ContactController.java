@@ -14,8 +14,10 @@ public class ContactController {
     private ContactService contactService;
     @PostMapping("/save-contact")
     public Contact saveContact(@RequestBody Contact contact){return contactService.saveContact(contact);}
-    @GetMapping("/get-contact")
+    @CrossOrigin
+    @GetMapping("/get-contacts")
     public List<Contact> fetchContacts(){return contactService.fetchContacts();}
+    @CrossOrigin
     @GetMapping("/get-contact/{id}")
     public Contact fetchContactById(@PathVariable("id") int contactId){return contactService.fetchContactById(contactId);}
     @DeleteMapping("/delete-contact/{id}")
