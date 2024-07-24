@@ -20,7 +20,7 @@ function Home(){
     }
 
     return(
-        <div className='flex flex-wrap p-4'>
+        <div className='flex flex-wrap p-4 sm:justify-start justify-center'>
         {
             items.map((item)=>(
                 <div className="mr-4 mb-4 max-w-[245px] bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
