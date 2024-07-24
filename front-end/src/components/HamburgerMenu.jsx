@@ -15,6 +15,7 @@ const HamburgerMenu = () => {
   return (
     <div className='custom-md:hidden pr-6'>
       <a id='dropdown-menu' 
+      href='#'
         className="nav-link" 
         data-bs-toggle="dropdown"
         aria-expanded={show}
