@@ -12,6 +12,7 @@ import java.util.List;
 public class AddressController {
     @Autowired
     private AddressService addressService;
+    @CrossOrigin
     @PostMapping(value = "/save-address", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public Address saveAddress(@RequestBody Address address){return addressService.saveAddress(address);}
     @CrossOrigin

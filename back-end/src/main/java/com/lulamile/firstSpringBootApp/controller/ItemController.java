@@ -12,6 +12,7 @@ import java.util.List;
 public class ItemController {
     @Autowired
     private ItemService itemService;
+    @CrossOrigin
     @PostMapping("/save-item")
     public Item saveItem(@RequestBody Item item){return itemService.saveItem(item);}
     @CrossOrigin

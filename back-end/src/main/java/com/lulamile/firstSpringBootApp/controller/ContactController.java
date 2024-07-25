@@ -12,6 +12,7 @@ import java.util.List;
 public class ContactController {
     @Autowired
     private ContactService contactService;
+    @CrossOrigin
     @PostMapping("/save-contact")
     public Contact saveContact(@RequestBody Contact contact){return contactService.saveContact(contact);}
     @CrossOrigin

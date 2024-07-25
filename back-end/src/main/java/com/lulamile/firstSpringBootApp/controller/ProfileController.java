@@ -22,8 +22,13 @@ public class ProfileController {
     private AddressService addressService;
     @Autowired
     private ContactService contactService;
+    @CrossOrigin
     @PostMapping("/save-profile")
     public Profile saveProfile(@RequestBody Profile profile){
+        var address=addressService.saveAddress(profile.getAddress());
+        Contact contact = contactService.saveContact(profile.getContact());
+        profile.setContact(contact);
+        profile.setAddress(address);
         return  profileService.saveProfile(profile);
     }
     @CrossOrigin
